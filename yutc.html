@@ -1,0 +1,1476 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.0.7/css/boxicons.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <title>VIETCOMBANK</title>
+  <style>
+    body {
+      margin: 0;
+      display: block;
+      text-align: center;
+      background-color: #f4f4f4;
+
+
+    }
+
+    #img {
+      float: left;
+      margin: 10px;
+      margin-left: 30px;
+
+    }
+
+    #templatemo_menu {
+      clear: both;
+      width: 1200px;
+      height: 80px;
+      background-color: #ffffff;
+      z-index: 999;
+      position: relative;
+      margin: 10px auto;
+      border-radius: 20px;
+
+    }
+
+    #templatemo_menu ul {
+      padding: 0px 0 0 0;
+      margin: 0 0 0 0px;
+      list-style: none;
+    }
+
+    #templatemo_menu ul li {
+      float: right;
+      display: inline;
+      position: relative;
+    }
+
+    #templatemo_menu ul li a {
+      width: auto;
+      height: 80px;
+      display: block;
+      padding: 25px 15px;
+      text-decoration: none;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #000000;
+      text-align: center;
+      font-size: 16px;
+      /* margin: 15px; */
+      margin-left: 10px;
+      margin-right: 30px;
+      margin-top: auto;
+
+
+
+    }
+
+    #templatemo_menu li a:hover {
+      color: #ee0000;
+      transition: 0.5s;
+      background: #ccd0d2;
+    }
+
+
+
+
+
+
+    /* end of menu */
+
+    #header {
+      background-color: #ff0000;
+      width: 1200px;
+      height: auto;
+      background-color: aqua;
+      margin: 0 auto;
+    }
+
+    #header ul {
+      padding: 0px 0 0 0;
+      margin-right: 10px;
+      list-style: none;
+    }
+
+    #header ul li {
+      margin-right: 10px;
+      float: right;
+      display: inline;
+      position: relative;
+      padding: 12px;
+      border-right: 1.5px solid #58595b;
+    }
+
+    #header ul li a {
+      display: block;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 16px;
+      color: #000000;
+      position: relative;
+    }
+
+    #header ul li a :hover {
+      background-color: #000000;
+    }
+
+    #header ul li a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 100%;
+      height: 2px;
+      background-color: #0b2997;
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+
+    #header ul li a:hover::after {
+      transform: scaleX(1);
+    }
+
+    #header .src {
+      float: right;
+      position: relative;
+      height: 40px;
+      margin-right: 130px;
+      margin-left: 20px;
+      margin-bottom: 20px;
+    }
+
+    #header .src input {
+      position: absolute;
+      height: 100%;
+      width: 130px;
+      left: 0;
+      top: 0;
+      border-radius: 20px;
+      outline: none;
+      border: none;
+      background: #ffffff;
+      padding-left: 40px;
+      font-size: 16px;
+      color: #000000;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+      transition: all 0.5s ease;
+    }
+
+    #header .src .bx-search {
+      position: absolute;
+      z-index: 99;
+      margin: 10px;
+      font-size: 25px;
+      color: #020101;
+      transition: all 0.5s ease;
+    }
+
+    #header .src .bx-search:hover {
+      color: #ffffff;
+    }
+
+    #header .src .bx-search:hover~input {
+      background: #e50c0c;
+    }
+
+    /* _________________________________________________ */
+
+    #templatemo_menu #sub-menu {
+
+      flex-direction: row;
+      position: absolute;
+      top: 100%;
+      left: -444px;
+      display: flex;
+      width: 1200px;
+      background-color: #144633;
+
+    }
+
+    #templatemo_menu #sub-menu ul li {
+
+      display: none;
+
+
+
+    }
+
+    #templatemo_menu #sub-menu ul li a {
+      width: auto;
+      height: auto;
+      margin-top: 0px;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #144633;
+      margin-left: -0px;
+      margin-right: -15px;
+      font-size: 15px;
+      padding: auto;
+
+
+
+    }
+
+    #templatemo_menu li:hover #sub-menu {
+      /* display: block; */
+      flex-direction: row;
+      position: absolute;
+      top: 100%;
+      left: -444px;
+      display: flex;
+      width: 1200px;
+
+
+    }
+
+    #templatemo_menu li:hover #sub-menu li a {
+      width: auto;
+      height: auto;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #ffffff;
+      margin-left: -0px;
+      margin-right: -15px;
+      font-size: 15px;
+      padding: auto;
+      background-color: #144633;
+
+    }
+
+    #templatemo_menu li:hover #sub-menu ul li {
+      width: auto;
+      height: auto;
+      display: inline-block;
+
+
+    }
+
+    /* __________________________________________ */
+
+
+    #templatemo_menu #sub-menu1 {
+      display: flex;
+      flex-direction: row;
+      position: absolute;
+      top: 100%;
+      left: -944px;
+      width: 1200px;
+      background-color: #933994;
+
+    }
+
+    #templatemo_menu #sub-menu1 ul li {
+
+      display: none;
+
+    }
+
+    #templatemo_menu #sub-menu1 ul li a {
+      width: 300px;
+      height: auto;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #000000;
+      margin-left: 50px;
+      margin-right: 50px;
+      font-size: 15px;
+      padding: auto;
+      margin-top: auto;
+
+    }
+
+    #templatemo_menu li:hover #sub-menu1 {
+      display: flex;
+      flex-direction: row;
+      position: absolute;
+      top: 100%;
+      left: -944px;
+      width: 1200px;
+      background-color: #933994;
+    }
+
+    #templatemo_menu li:hover #sub-menu1 li a {
+      width: 300px;
+      height: auto;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #ffffff;
+      margin-left: 50px;
+      margin-right: 50px;
+      font-size: 16px;
+      padding: auto;
+      background-color: #933994;
+      margin-top: auto;
+
+    }
+
+    #templatemo_menu li:hover #sub-menu1 ul li {
+      width: auto;
+      height: auto;
+      display: inline-block;
+
+
+    }
+
+    /* ____________________________________________ */
+
+    #templatemo_menu #sub-menu #menu_child {
+
+
+      flex-direction: row;
+      position: absolute;
+      top: 100%;
+      left: 0px;
+      display: flex;
+      width: 1200px;
+      background-color: #000000;
+    }
+
+    #templatemo_menu #sub-menu #menu_child li {
+      display: none;
+    }
+
+    #templatemo_menu #sub-menu #menu_child li a {
+      width: 270px;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #000000;
+      margin-left: 0px;
+      margin-right: 0px;
+      font-size: 15px;
+      background-color: #d3d5d6;
+    }
+
+    #templatemo_menu li:hover #sub-menu li:hover #menu_child {
+      flex-direction: row;
+      position: absolute;
+      top: 100%;
+      left: 0px;
+      /* display: block; */
+
+      background-color: #000000;
+    }
+
+    #templatemo_menu li:hover #sub-menu li:hover #menu_child li a {
+      width: 300px;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #58585b;
+
+    }
+
+    #templatemo_menu li:hover #sub-menu li:hover #menu_child li {
+      width: auto;
+      height: auto;
+      display: inline-block;
+
+
+    }
+
+    /* ______________________________________________ */
+
+    #templatemo_menu #sub-menu2 {
+      display: flex;
+      flex-direction: row;
+      position: absolute;
+      top: 100%;
+      left: -696px;
+      width: 1200px;
+      background-color: #c39e2d;
+
+
+    }
+
+    #templatemo_menu #sub-menu2 ul li {
+
+      display: none;
+
+    }
+
+    #templatemo_menu #sub-menu2 ul li a {
+      width: auto;
+      height: auto;
+      display: inline-block;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #ffffff;
+      margin-left: 20px;
+      margin-right: 20px;
+      font-size: 15px;
+      padding-left: 20px;
+      padding-right: 20px;
+      background-color: #c39e2d;
+      margin-top: auto;
+
+    }
+
+    #templatemo_menu li:hover #sub-menu2 {
+      display: flex;
+      flex-direction: row;
+      position: absolute;
+      top: 100%;
+      left: -696px;
+      width: 1200px;
+      background-color: #c39e2d;
+    }
+
+    #templatemo_menu li:hover #sub-menu2 li a {
+      width: auto;
+      height: auto;
+      display: inline-block;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #ffffff;
+      margin-left: 20px;
+      margin-right: 20px;
+      font-size: 15px;
+      padding-left: 20px;
+      padding-right: 20px;
+      background-color: #c39e2d;
+      margin-top: auto;
+
+
+    }
+
+    #templatemo_menu li:hover #sub-menu2 ul li {
+      width: auto;
+      height: auto;
+      display: inline-block;
+
+
+    }
+
+    /* ____________________________________________ */
+
+    #templatemo_menu #sub-menu #menu_child1 {
+
+
+      flex-direction: row;
+      position: absolute;
+      top: 100%;
+      left: 0px;
+      display: flex;
+      width: 1200px;
+      margin-left: -181px;
+      background-color: #000000;
+    }
+
+
+    #templatemo_menu #sub-menu #menu_child1 li {
+      display: none;
+    }
+
+    #templatemo_menu #sub-menu #menu_child1 li a {
+      width: 270px;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #58585b;
+      margin-left: -0px;
+      margin-right: 0px;
+      font-size: 15px;
+      background-color: #d3d5d6;
+    }
+
+    hr {
+      margin-top: 30px;
+    }
+
+    #templatemo_menu li:hover #sub-menu li:hover #menu_child1 {
+      flex-direction: row;
+      position: absolute;
+      top: 100%;
+      left: 0px;
+      /* display: flex; */
+      width: 1200px;
+      background-color: #000000;
+    }
+
+    #templatemo_menu li:hover #sub-menu li:hover #menu_child1 li a {
+      width: 300px;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #58585b;
+
+    }
+
+    #templatemo_menu li:hover #sub-menu li:hover #menu_child1 li {
+      width: auto;
+      height: auto;
+      display: inline-block;
+
+
+    }
+
+    /* ____________________________________________ */
+
+    #templatemo_menu #sub-menu #menu_child2 {
+
+      flex-direction: row;
+      position: absolute;
+      top: 100%;
+      left: 0px;
+      display: flex;
+      width: 1200px;
+      margin-left: -262px;
+      background-color: #000000;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+
+    #templatemo_menu #sub-menu #menu_child2 li {
+      display: none;
+
+
+
+    }
+
+    #templatemo_menu #sub-menu #menu_child2 li a {
+      width: 300px;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #fcfcfc;
+      margin-left: -0px;
+      margin-right: 0px;
+      font-size: 15px;
+      background-color: #d3d5d6;
+    }
+
+    hr {
+      margin-top: 20px;
+      border-color: #58585b;
+    }
+
+    #templatemo_menu li:hover #sub-menu li:hover #menu_child2 {
+      flex-direction: row;
+      position: absolute;
+      top: 100%;
+      left: 0px;
+      /* display: flex; */
+      width: 1200px;
+      margin-left: -262px;
+      background-color: #000000;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    #templatemo_menu li:hover #sub-menu li:hover #menu_child2 li a {
+      width: 300px;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #58585b;
+      margin-left: -0px;
+      margin-right: 0px;
+      font-size: 15px;
+      background-color: #d3d5d6;
+    }
+
+    #templatemo_menu li:hover #sub-menu li:hover #menu_child2 li {
+      width: auto;
+      height: auto;
+      display: inline-block;
+
+
+    }
+
+    /* ____________________________________________ */
+    #templatemo_menu #sub-menu #menu_child3 {
+
+      flex-direction: row;
+      position: absolute;
+      top: 100%;
+      left: 0px;
+      display: flex;
+      width: 1200px;
+      margin-left: -303px;
+      background-color: #000000;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+
+    #templatemo_menu #sub-menu #menu_child3 li {
+      display: none;
+
+      background-color: #ff0000;
+
+    }
+
+    #templatemo_menu #sub-menu #menu_child3 li a {
+      width: 270px;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #fcfcfc;
+      margin-left: -0px;
+      margin-right: 0px;
+      font-size: 15px;
+      background-color: #2630bb;
+    }
+
+
+    #templatemo_menu li:hover #sub-menu li:hover #menu_child3 {
+      flex-direction: row;
+      position: absolute;
+      top: 100%;
+      left: 0px;
+      /* display: flex; */
+      width: 1200px;
+      margin-left: -303px;
+      background-color: #000000;
+      flex-wrap: wrap;
+    }
+
+    #templatemo_menu li:hover #sub-menu li:hover #menu_child3 li a {
+      width: 300px;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #58585b;
+      margin-left: -0px;
+      margin-right: 0px;
+      font-size: 15px;
+      background-color: #d3d5d6;
+    }
+
+    #templatemo_menu li:hover #sub-menu li:hover #menu_child3 li {
+      width: auto;
+      height: auto;
+      display: inline-block;
+
+
+    }
+
+    /* banner_________________________________________________________ */
+    #chutrongbanner {
+      position: absolute;
+      top: 150px;
+      left: 280px;
+      text-align: left;
+      transform: translate(-50%, -50%);
+      color: rgb(253, 253, 253);
+      border-radius: 15px;
+
+      background-color: rgb(31, 124, 13);
+      width: auto;
+      min-width: 500px;
+      max-width: 500px;
+      height: auto;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    #chutrongbanner h2 {
+
+      font-size: 25px;
+      font-weight: bold;
+
+
+    }
+
+    #chutrongbanner p {
+
+      font-size: 25px;
+      font-weight: bold;
+      line-height: 30px !important;
+      font-size: 18px !important;
+      font-weight: 400 !important;
+      padding-bottom: 5px;
+
+
+    }
+
+    #chunen_content {
+      position: absolute;
+      /* top: 0px;
+							left: 5px; */
+      text-align: left;
+      /* transform: translate(-50%, -50%); */
+      color: rgb(1, 1, 1);
+      /* border-radius: 15px; */
+      /* 
+							background-color: rgb(31, 124, 13); */
+      width: 290px;
+      /* min-width: 500px;
+							max-width: 500px; */
+      background-color: rgba(255, 255, 255, 0.5);
+      height: auto;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    #footer {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      /* Khoảng cách giữa các ô */
+      background-color: rgb(69, 192, 12);
+      margin-top: 200px;
+      width: 1200px;
+      margin: 0 auto;
+      border-radius: 20px 20px 0 0;
+      margin-top:  50px;;
+    }
+
+
+    .footerGrid {
+      margin-left: 50px;
+      text-align: left;
+    }
+
+    #chunen_content h3 {
+
+      /* display: flex; */
+      float: left;
+      font-weight: bold;
+      line-height: 30px !important;
+      font-size: 18px !important;
+      font-weight: 400 !important;
+      padding-bottom: 5px;
+      word-wrap: break-word;
+      font-weight: bold;
+
+
+
+    }
+  </style>
+</head>
+
+<body>
+  <div id="header">
+    <ul class="link-top">
+      <div class="src">
+        <i class='bx bx-search'></i>
+        <input type="text" placeholder="Search..">
+      </div>
+      <li><a href="">Trang chủ</a></li>
+      <li><a href="">Giới thiệu</a></li>
+      <li><a href=" ">Tin tức - Sự kiện</a></li>
+      <li><a href="">Nhà đầu tư</a></li>
+      <li><a href="">Tuyển dụng</a></li>
+    </ul>
+  </div>
+
+  <div id="templatemo_menu">
+    <div id="img">
+      <a href="./yutc.html">
+        <img src="../logo.png" alt="" style="width:180px;">
+      </a>
+    </div>
+    <ul>
+
+
+      <li><a href="">KHÁCH HÀNG TỔ CHỨC</a>
+        <div id="sub-menu1">
+          <ul>
+            <li> <a href="">Khách hàng doanh nghiệp</a></li>
+            <li> <a href="">Doanh nghiệp SMEs</a></li>
+            <li> <a href="">Định chế tài chính</a></li>
+
+
+          </ul>
+
+        </div>
+      </li>
+      <li><a href="">KHÁCH HÀNG ƯU TIÊN</a>
+        <div id="sub-menu2">
+          <ul>
+            <li> <a href="">Tin tức và sự kiện</a></li>
+            <li> <a href="">Quyền lợi và điều kiện tham gia</a></li>
+            <li> <a href="">Sản phẩm dịch vụ</a></li>
+            <li> <a href="">Điểm giao dịch ưu tiên</a></li>
+            <li> <a href="">Khách hàng doanh nghiệp</a></li>
+
+          </ul>
+      </li>
+      <li><a href="">KHÁCH HÀNG CÁ NHÂN</a>
+        <div id="sub-menu">
+          <ul>
+
+
+            <li><a href="">Giao dịch an toàn</a>
+            </li>
+            <li><a href="">VCB Family</a></li>
+            <li><a href="">VCB Rewards</a></li>
+            <li><a href="">Đầu tư</a></li>
+            <li><a href="">Bảo hiểm</a></li>
+            <li><a href="">Ngân hàng số</a></li>
+            <li><a href="">Chuyển và nhận tiền</a></li>
+
+            <li><a href="">Cho vay</a></li>
+            <li><a href="">Tiết kiệm</a>
+              <ul id="menu_child3">
+                <li><a href="">Tiền gửi, tiết kiệm trả lãi sau
+                    <hr>
+                  </a></li>
+                <li><a href="">Tiền gửi rút gốc linh hoạt
+                    <hr>
+                  </a></li>
+                <li><a href="">Tiền gửi, tiết kiệm trả lãi trước
+                    <hr>
+                  </a></li>
+                <li><a href="">Tiết kiệm trả lãi định kỳ
+                    <hr>
+                  </a></li>
+
+                <li><a href="">Tiết kiệm tự động
+                    <hr>
+                  </a></li>
+                <li><a href="">Tích lũy kiểu hối
+                    <hr>
+                  </a></li>
+                <li><a href="">Tiền gửi trưc tuyến
+                    <hr>
+                  </a></li>
+                <li><a href="">Tiền gửi tích lũy trực tuyến
+                    <hr>
+                  </a></li>
+              </ul>
+            </li>
+            <li><a href="./The.html">Thẻ</a>
+              <ul id="menu_child2">
+                <li><a href="./The.html">Thẻ tin dụng quốc tế
+                    <hr>
+                  </a></li>
+                <li><a href="./The.html">Thẻ ghi nợ quốc tế
+                    <hr>
+                  </a></li>
+                <li><a href="./The.html">Thẻ ghi nợ nội địa
+                    <hr>
+                  </a></li>
+                <li><a href="./The.html">Dịch vụ thanh toán
+                    <hr>
+                  </a></li>
+
+                <li><a href="./The.html">Tin tức cập nhật
+                    <hr>
+                  </a></li>
+                <li><a href="./The.html">Lưu ý khi sử dụng thẻ
+                    <hr>
+                  </a></li>
+                <li><a href="./The.html">Đạt lịch hẹn mở thẻ
+                    <hr>
+                  </a></li>
+                <li><a href="./The.html">Ưu đãi trả góp thẻ
+                    <hr>
+                  </a></li>
+              </ul>
+            </li>
+            <li><a href="./TaiKhoan.html">Tài khoản</a>
+              <ul id="menu_child1">
+                <li><a href="./TaiKhoan.html">Mở tài khoản trực tuyến
+                    <hr>
+                  </a></li>
+                <li><a href="./TaiKhoan.html">Đặt lịch hẹn mở tài khoản
+                    <hr>
+                  </a></li>
+                <li><a href="./TaiKhoan.html">Tài khoản thanh toan
+                    <hr>
+                  </a></li>
+                <li><a href="./TaiKhoan.html">Mở tài khoản trên ví VPPAY
+                    <hr>
+                  </a></li>
+              </ul>
+            </li>
+            <li><a href="">Đăng ký dịch vụ</a> </li>
+
+
+
+
+            <li><a href="./UuDai.html">Ưu đãi</a>
+              <ul id="menu_child">
+                <li> <a href="./UuDai.html">Ưu đãi chung
+                    <hr>
+                  </a></li>
+                <li> <a href="./UuDai.html">Ưu đãi thẻ
+                    <hr>
+                  </a></li>
+                <li> <a href="./UuDai.html">Bảo hiểm
+                    <hr>
+                  </a></li>
+                <li> <a href="UuDai.html">Đầu tư
+                    <hr>
+                  </a></li>
+              </ul>
+
+            </li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <!-- <script src="http://code.jquery.com/jquery-1.7.min.js"></script> -->
+  <script>
+    $('#templatemo_menu > ul > li').hover(function () {
+      // khi thẻ menu li bị hover thì drop down menu thuộc thẻ li đó sẽ trượt xuống(hiện)
+      $('#sub-menu', this).slideDown(500);
+    }, function () {
+      // khi thẻ menu li bị out không hover nữa thì drop down menu thuộc thẻ li đó sẽ trượt lên(ẩn)
+      $('#sub-menu', this).slideUp();
+    });
+
+    $('#sub-menu > ul > li').hover(function () {
+      // khi thẻ dropdown_menu li bị hover thì submenusubmenu thuộc thẻ li đó sẽ trượt xuống(hiện)
+      $('#menu_child', this).slideDown(500);
+    }, function () {
+      // khi thẻ dropdown_menu li bị hover thì submenusubmenu thuộc thẻ li đó sẽ trượt lên(ẩnẩn)
+      $('#menu_child', this).slideUp();
+    });
+
+    $('#sub-menu > ul > li').hover(function () {
+      // khi thẻ dropdown_menu li bị hover thì submenusubmenu thuộc thẻ li đó sẽ trượt xuống(hiện)
+      $('#menu_child1', this).slideDown(500);
+    }, function () {
+      // khi thẻ dropdown_menu li bị hover thì submenusubmenu thuộc thẻ li đó sẽ trượt lên(ẩnẩn)
+      $('#menu_child1', this).slideUp();
+    });
+
+    $('#sub-menu > ul > li').hover(function () {
+      // khi thẻ dropdown_menu li bị hover thì submenusubmenu thuộc thẻ li đó sẽ trượt xuống(hiện)
+      $('#menu_child2', this).slideDown(500);
+    }, function () {
+      // khi thẻ dropdown_menu li bị hover thì submenusubmenu thuộc thẻ li đó sẽ trượt lên(ẩnẩn)
+      $('#menu_child2', this).slideUp();
+    });
+
+
+    $('#sub-menu > ul > li').hover(function () {
+      // khi thẻ dropdown_menu li bị hover thì submenusubmenu thuộc thẻ li đó sẽ trượt xuống(hiện)
+      $('#menu_child3', this).slideDown(500);
+    }, function () {
+      // khi thẻ dropdown_menu li bị hover thì submenusubmenu thuộc thẻ li đó sẽ trượt lên(ẩnẩn)
+      $('#menu_child3', this).slideUp();
+    });
+  </script>
+  <div class="container">
+
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+        <li data-target="#myCarousel" data-slide-to="4"></li>
+        <li data-target="#myCarousel" data-slide-to="5"></li>
+        <li data-target="#myCarousel" data-slide-to="6"></li>
+
+      </ol>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+        <div class="item active">
+          <div id="chutrongbanner">
+            <h2>CHẠM ĐẲNG CẤP - TIÊU SÀNH ĐIỆU
+            </h2>
+            <p>
+              Hoàn 100.000 VND cho chủ thẻ Vietcombank Visa liên kết thẻ với Google Wallet có giao dịch từ 200.00 VND
+            </p>
+          </div>
+
+
+          <img src="./banner1.jpg" alt="" style="width:1200px;height: 300px;border-radius: 20px;">
+        </div>
+
+        <div class="item">
+          <div id="chutrongbanner">
+            <h2>HOÀN TIỀN LÊN ĐẾN 950.000 ĐỒNG
+            </h2>
+            <p>
+              Khi phát hành và chi tiêu bằng thẻ tín dụng JCB hạng vàng
+            </p>
+          </div>
+          <img src="./banner2.jpg" alt="" style="width:1200px;height: 300px;border-radius: 20px;">
+        </div>
+        <div class="item">
+          <div id="chutrongbanner">
+            <h2>XÀI THẺ VIETCOMBANK, ĐẾN AEON CHỌN GÌ CŨNG ĐÃ
+            </h2>
+            <p>
+              Tặng Voucher 100K cho hóa đơn từ 1 triệu đồng thanh toán bằng thẻ Quốc tế Vietcombank
+            </p>
+          </div>
+          <img src="./banner3.jpg" alt="" style="width:1200px;height: 300px;border-radius: 20px;">
+        </div>
+
+        <div class="item">
+          <div id="chutrongbanner">
+            <h2>CHẠM THẺ SANG - NGÀN KHỞI SẮC
+            </h2>
+            <p>
+              Ưu đãi đến 60 triệu đồng nhân dịp ra mắt thẻ tín dụng JCB Platinum
+            </p>
+            <p>
+              Áp dụng đến 27/09/2023
+            </p>
+          </div>
+          <img src="./banner4.jpg" alt="" style="width:1200px;height: 300px;border-radius: 20px;">
+        </div>
+        <div class="item">
+          <div id="chutrongbanner">
+            <h2>BẢO HIỂM VỀ TAY, CÓ NGAY VOUCHER
+            </h2>
+            <p>
+              Tặng phiếu mua hàng lên đến 500.000 VND khi mua bảo hiểm online tại Vietcombank
+            </p>
+            <p>Áp dụng từ 05/05/2023 đến hết 3107/2023</p>
+          </div>
+          <img src="./banner5.jpg" alt="" style="width:1200px;height: 300px;border-radius: 20px;">
+        </div>
+        <div class="item">
+          <div id="chutrongbanner">
+            <h2>TIÊU THẺ NGÀY NGÀY - QUÀ TẶNG ĐẦY TAY
+            </h2>
+            <p>
+              Khám phá thế giới ưu đãi thẻ " Joy of life"
+            </p>
+            <p>
+              Giải trí - Ẩm thực - Du lịch - Thời trang - Điện máy...
+            </p>
+          </div>
+          <img src="./banner6.jpg" alt="" style="width:1200px;height: 300px;border-radius: 20px;">
+        </div>
+        <div class="item">
+          <div id="chutrongbanner">
+            <h2>VCB TAP TO PHONE
+            </h2>
+            <h2>GIAO DỊCH THÔNG MINH, RINH QUÀ THẬT CHẤT
+            </h2>
+            <p>
+              Hoàn 800.000 VND cho đơn vị chấp nhận thẻ có doanh số từ 20.000.000 VND
+            </p>
+            <p>
+              Áp dụng đến 16/06/2023
+            </p>
+          </div>
+          <img src="./banner6.jpg" alt="" style="width:1200px;height: 300px;border-radius: 20px;">
+        </div>
+      </div>
+
+      <!-- Left and right controls -->
+      <!-- di chuyển banner -->
+      <!-- <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span>
+      </a> -->
+    </div>
+  </div>
+  <style>
+    .container {
+      margin-top: 40px;
+      z-index: 1;
+      width: 1230px;
+
+
+    }
+
+    .container1 {
+      margin-top: 40px;
+      z-index: 1;
+      width: 900px;
+      /* display: none; */
+
+    }
+
+    .carousel-indicators {
+      margin-bottom: 0px;
+      width: auto;
+      height: 10px;
+      margin-left: 480px;
+
+    }
+
+    .carousel-indicators li {
+      background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .carousel-indicators li.active {
+      background-color: #82bc00;
+    }
+
+    .carousel-indicators li:hover {
+      background-color: #82bc00;
+    }
+  </style>
+
+  <div id="content">
+    <div id="left">
+
+      <div class="button-container">
+        <button class="button button1 active" data-target="box1">Khuyến mãi </button>
+        <button class="button button2" data-target="box2">Tin tức & sự kiện</button>
+        <button class="button button3" data-target="box3">Mạng lưới</button>
+      </div>
+      <div class="container1">
+
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+          <!-- Indicators -->
+
+
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner">
+            <div class="item active">
+              <div id="amn">
+
+                <div class="box box1 active" id="box1">
+                  <div id="chunen_content">
+                    <h3> Nhận ngay 100.000 VND khi "Mở tài khoản Vietcombank trên Ví VNPAY</h3>
+                  </div>
+                  <img src="./khuyenmai1.png" alt="" style="width: 280px;margin-top: 5px;
+                  height: 170px;">
+                </div>
+                <div class="box box1 active" id="box1">
+                  <div id="chunen_content">
+                    <h3> Vietcombank và Hyundai Thành Công tiếp tục hợp tác cho vay mua xe lãi suất 0%</h3>
+                  </div>
+                  <img src="./khuyenmai2.jpg" alt="" style="width: 280px;margin-top: 5px;
+                  height: 170px;">
+
+
+                </div>
+                <div class="box box1 active" id="box1">
+                  <div id="chunen_content">
+                    <h3> Thông báo gia hạn chương trình tặng Voucher 100k tại siêu thị AEON cùng thẻ quốc tế Vietcombnak
+                    </h3>
+                  </div>
+                  <img src="./khuyenmai3.png" alt="" style="width: 280px;margin-top: 5px;
+                  height: 170px;">
+                </div>
+
+              </div>
+              <div id="amn">
+
+                <div class="box box2 " id="box2">
+                  <div id="chunen_content">
+                    <h3> Vietcombank cảnh cáo rủi ro khi khách hàng chia sẻ thông tin đăng nhập dihcj vụ ngân hàng số
+                      với bên thứ ba</h3>
+                  </div>
+                  <img src="./tintuc1.png" alt="" style="width: 280px;margin-top: 5px;
+                  height: 170px;">
+                </div>
+                <div class="box box2" id="box2">
+                  <div id="chunen_content">
+                    <h3> Vietcombank được trao 3 giải thưởng quan trọng tại diễn đàn Ngân hàng bán lẻ Việt Nam 2023</h3>
+                  </div>
+                  <img src="./tintuc2.png" alt="" style="width: 280px;margin-top: 5px;
+                  height: 170px;">
+                </div>
+                <div class="box box2" id="box2">
+                  <div id="chunen_content">
+                    <h3> Bản tin hình số 91</h3>
+                  </div>
+                  <img src="./tintuc3.jpg" alt="" style="width: 280px;margin-top: 5px;
+                  height: 170px;">
+                </div>
+
+              </div>
+
+
+              <!-- <img src="./banner1.jpg" alt="" style="width:1200px;height: 300px;border-radius: 20px;"> -->
+            </div>
+            <div class="item">
+              <div id="amn">
+
+                <div class="box box1 active" id="box1">
+                  <div id="chunen_content">
+                    <h3> Nhận ngay 100.000 VND khi "Mở tài khoản Vietcombank trên Ví VNPAY</h3>
+                  </div>
+                  <img src="./khuyenmai1.png" alt="" style="width: 280px;margin-top: 5px;
+                  height: 170px;">
+                </div>
+                <div class="box box1 active" id="box1">
+                  <div id="chunen_content">
+                    <h3> Vietcombank và Hyundai Thành Công tiếp tục hợp tác cho vay mua xe lãi suất 0%</h3>
+                  </div>
+                  <img src="./khuyenmai2.jpg" alt="" style="width: 280px;margin-top: 5px;
+                  height: 170px;">
+
+
+                </div>
+                <div class="box box1 active" id="box1">
+                  <div id="chunen_content">
+                    <h3> Thông báo gia hạn chương trình tặng Voucher 100k tại siêu thị AEON cùng thẻ quốc tế Vietcombnak
+                    </h3>
+                  </div>
+                  <img src="./khuyenmai3.png" alt="" style="width: 280px;margin-top: 5px;
+                  height: 170px;">
+                </div>
+
+              </div>
+              <div id="amn">
+
+                <div class="box box2 " id="box2">
+                  <div id="chunen_content">
+                    <h3>Triển khai dịch vụ liên kết tài khoản thanh tonas Vietcombank với tài khoản Viettel Pay trên ứng
+                      dụng Viettel Money</h3>
+                  </div>
+                  <img src="./tintuc4.png" alt="" style="width: 280px;margin-top: 5px;
+                      height: 170px;">
+                </div>
+                <div class="box box2 " id="box2">
+                  <div id="chunen_content">
+                    <h3> Thông báo diên mạo và tên sản phẩm mới dành cho thẻ Vietcombank </h3>
+                  </div>
+                  <img src="./tintuc5.png" alt="" style="width: 280px;margin-top: 5px;
+                      height: 170px;">
+                </div>
+                <div class="box box2 " id="box2">
+                  <div id="chunen_content">
+                    <h3> bản tin hình số 92</h3>
+                  </div>
+                  <img src="./tintuc6.jpg" alt="" style="width: 280px;margin-top: 5px;
+                      height: 170px;">
+                </div>
+
+              </div>
+
+            </div>
+            <div id="amn">
+
+              <div class="box box3" id="box3">
+                <div id="chunen_content">
+                  <h3> Điểm giao dịch</h3>
+                </div>
+                <img src="./mangluoi1.png" alt="" style="width: 280px;margin-top: 5px;
+                    height: 170px;">
+              </div>
+              <div class="box box3" id="box3">
+                <div id="chunen_content">
+                  <h3> Điểm đặt ATM</h3>
+                </div>
+                <img src="./mangluoi2.png" alt="" style="width: 280px;margin-top: 5px;
+                    height: 170px;">
+              </div>
+              <div class="box box3" id="box3">
+                <div id="chunen_content">
+                  <h3> Điểm thanh toán</h3>
+                </div>
+                <img src="./mangluoi3.jpg" alt="" style="width: 280px;margin-top: 5px;
+                    height: 170px;">
+              </div>
+
+
+            </div>
+
+            <!-- <img src="./banner3.jpg" alt="" style="width:1200px;height: 300px;border-radius: 20px;"> -->
+          </div>
+
+
+
+        </div>
+
+        <!-- Left and right controls -->
+        <!-- di chuyển banner -->
+        <!-- <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right"></span>
+              <span class="sr-only">Next</span>
+            </a> -->
+      </div>
+
+
+      <script>const buttons = document.querySelectorAll(".button");
+        const boxes = document.querySelectorAll(".box");
+
+        buttons.forEach(button => {
+          button.addEventListener("click", () => {
+            const target = button.getAttribute("data-target");
+            boxes.forEach(box => {
+              if (box.getAttribute("id") === target) {
+                box.classList.add("active");
+              } else {
+                box.classList.remove("active");
+              }
+            });
+            buttons.forEach(btn => btn.classList.remove("active"));
+            button.classList.add("active");
+          });
+        });</script>
+    </div>
+    <div id="right">
+      <h3>Ngân hàng số</h3>
+      <div>
+        <div class="row">
+          <div class="col">
+            <img src="./Logo_VCBDigiBank.png"
+              style="width: 122px;height: 33px; border-bottom-right-radius: 1.5px solid #58595b;">
+          </div>
+          <div class="col separator">
+            <hr>
+          </div>
+          <div class="col">
+            <img src="./Logo_VCBDigiBiz.png" style="width: 122px;height: 33px;">
+          </div>
+        </div>
+        <div class="row separator">
+          <hr>
+        </div>
+        <div class="row">
+          <div class="col">
+            <img src="./Logo_VCBIBanking.png" style="width: 122px;height: 33px;">
+          </div>
+          <div class="col separator">
+            <div class="separator-line"></div>
+          </div>
+          <div class="col">
+            <img src="./Logo_VCBCashUp.png" style="width: 122px;height: 33px;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="footer">
+    <div class="footerGrid">
+      <h4>Liên hệ</h4>
+      <li><a href="">1900 54 54 13</a></li>
+      <li><a href="">cơ chế tố giác</a></li>
+      <li><a href="">Email liên hệ</a></li>
+    </div>
+    <div class="footerGrid">
+      <h4>Tìm vietcombank</h4>
+      <li><a href="">Điểm đặt ATM</a></li>
+      <li><a href="">Điểm giao dịch</a></li>
+      <li><a href="">Điểm mua bán ngoại tệ</a></li>
+    </div>
+    <div class="footerGrid">
+      <h4>Thông tin</h4>
+      <li><a href="">Tỷ Giá</a></li>
+      <li><a href="">Lãi suất</a></li>
+      <li><a href="">Câu hỏi thường gặp</a></li>
+    </div>
+    <div class="footerGrid">
+      <h4>Công cụ tính toán </h4>
+      <li><a href="">Chuyển đổi ngoại tệ</a></li>
+      <li><a href="">Tính lịch trả nợ</a></li>
+    </div>
+  </div>
+
+
+  <style>
+    #right {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-top: 0px;
+      height: 250px;
+      border: 1px solid #000000;
+      border-radius: 10px;
+      margin-top: auto;
+    }
+
+    .row {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .col {
+      flex: 1;
+      margin: 10px;
+    }
+
+    .separator {
+      display: flex;
+      align-items: center;
+    }
+
+    .separator hr {
+      width: 100%;
+      border: none;
+      border-top: 1px solid black;
+    }
+
+    #content {
+      /* clear: both; */
+      width: 1200px;
+      height: auto;
+
+      margin: 10px auto;
+      
+
+    }
+
+    #left {
+      float: left;
+      min-width: 75%;
+      width: auto;
+      margin-top: 10px;
+      background-color: #f8f8f8;
+    }
+
+
+    .button-container {
+      justify-content: flex-start;
+      align-items: center;
+      margin-bottom: 10px;
+      display: flex;
+      width: 896px;
+      background-color: #ffffff;
+      border-bottom: 1px solid black;
+    }
+
+    .button {
+      font-size: 18px;
+      color: #000000;
+      background-color: white;
+      border: 1px solid black;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 10px 10px 0 0;
+    }
+
+    .box1 {
+      background-color: #ff9999;
+
+    }
+
+    .box2 {
+      background-color: #99ff99;
+
+    }
+
+    .box3 {
+      background-color: #9999ff;
+    }
+
+    .button.active {
+      background-color: #144633;
+      color: #ffffff;
+
+    }
+
+    #amn {
+      display: flex;
+      justify-content: space-between;
+      width: 896px;
+    }
+
+    .box-container {
+      /* display: inline-block;
+    justify-content: center; */
+      display: flex;
+      justify-content: space-between;
+      width: 896px;
+    }
+
+    .box {
+      width: 290px;
+      height: 180px;
+      display: none;
+      background-size: 280px 170px;
+      background-color: #ffffff;
+    }
+
+    .box.active {
+      display: block;
+
+    }
+
+    .img {
+      width: 280px;
+      height: 170px;
+    }
+  </style>
+  
+
+</body>
+
+</html>

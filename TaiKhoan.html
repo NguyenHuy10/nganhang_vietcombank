@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.0.7/css/boxicons.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <title>VIETCOMBANK</title>
+  <link rel="stylesheet" href="./mystyle.css">
+  <script src="./script.js"></script>
+
+  <style>
+    #content 
+  {
+    width: 1200px;
+    height: auto;
+    display: flex;
+    margin: 15px auto;
+    gap: 10px;
+    border-radius: 20px;
+  }
+
+  .contentLeft
+  {
+      border: 5px solid rgb(69, 192, 12);
+      background-color: white;
+      width: 350px;
+      height: 600px;
+      border-radius: 20px;
+      /* border: 1px solid black; */
+  }
+  .contentLeft .contentLeft_tittle
+  {
+      box-sizing: border-box;
+      border: 1px solid rgb(69, 192, 12);
+      background-color: rgb(69, 192, 12); 
+      margin-left: 10px ;
+      margin-right: 10px ;
+      margin-top: 10px; 
+      height: 40px;
+      padding: 5px 10px;
+      color: black;
+      border-radius: 10px;
+      font-weight: bolder;
+      font-size: 20px;
+  }
+
+  .contentLeft .contentLeft_Small_Menu
+  {
+      height: auto;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      list-style-type: none;
+      text-decoration: none;
+
+  }
+
+  .contentLeft .contentLeft_Small_Menu a
+  {
+      text-decoration: none;
+      padding-left: 10px;
+      font-weight: bolder;
+      color:black;
+  }
+
+  .contentLeft .contentLeft_Small_Menu a:hover
+  {
+      color: rgb(69, 192, 12);
+  }
+
+
+  .contentLeft .contentLeft_News
+  {
+      border-top: 5px solid rgb(69, 192, 12);
+      margin-top: 20px;
+      margin-left: 0px;
+  }
+
+  .contentLeft .contentLeft_News img
+  {
+      width: 280px;
+  }
+
+
+
+
+  .image-list {
+      position: relative;
+      height: 400px;
+      overflow: hidden;
+    }
+    
+  .image-item {
+      position: absolute;
+      top: 0;
+      left:0;
+      right: 0px;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+    
+  .image-item.active {
+      opacity: 1;
+  }
+
+  .image-item a
+  {
+      text-decoration: none;
+      color:black;
+      font-weight: bold;
+      /* background-color:black; */
+      transition: transform 0.3s ease;
+  }
+
+
+  .contentRight
+  {
+      width: 100%;
+      height: 750px;
+      background-color:white;
+      border-radius:20px ;
+
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px; /* Khoảng cách giữa các ô */
+  }
+
+  .contentRight_grid
+  {
+      line-height: 40px;
+      margin: 10px;
+      margin-top: 20px;
+      padding: 10px;
+      text-align:left;
+
+  }
+  .contentRight_grid h4
+  {
+      font-weight: bolder;
+  }
+
+  .contentRight_grid a
+  {
+      
+      text-decoration: none;
+      color: black;
+      display: block;
+  }
+  .contentRight_grid a::before
+  {
+      content: "• "; /* Dấu chấm và khoảng trắng */
+  }
+  .contentRight_grid a:hover
+  {
+      transform: translateY(-10px); /* Chữ nổi lên 2px */
+      color: rgb(69, 192, 12) ; /* Màu chữ khi hover */
+  }
+
+  .contentRight_grid img
+  {
+      width: 200px;
+      height: 120px;
+      border-radius: 20px ;
+  }
+
+
+    #footer
+  {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px; /* Khoảng cách giữa các ô */
+    background-color: rgb(69, 192, 12);
+    margin-top:200px;
+    width: 1200px;
+    margin:0 auto;
+    border-radius: 20px 20px 0 0  ;
+  }
+
+
+  .footerGrid
+  {
+    margin-left: 50px;
+      text-align: left;
+  }
+  </style>
+</head>
+
+<body>
+  <div id="header">
+    <ul class="link-top">
+      <div class="src">
+        <i class='bx bx-search'></i>
+        <input type="text" placeholder="Search..">
+      </div>
+      <li><a href=" ">Trang chủ</a></li>
+      <li><a href="">Giới thiệu</a></li>
+      <li><a href=" ">Tin tức - Sự kiện</a></li>
+      <li><a href="">Nhà đầu tư</a></li>
+      <li><a href="">Tuyển dụng</a></li>
+    </ul>
+  </div>
+
+  <div id="templatemo_menu">
+    <div id="img">
+      <a href="./yutc.html">
+        <img src="../logo.png" alt="" style="width:180px;">
+      </a>
+  </div>
+    <ul>
+     
+    
+      <li><a href="">KHÁCH HÀNG TỔ CHỨC</a>
+      <div id="sub-menu1">
+        <ul>
+          <li> <a href="">Khách hàng doanh nghiệp</a></li>
+          <li> <a href="">Doanh nghiệp SMEs</a></li>
+          <li> <a href="">Định chế tài chính</a></li>
+         
+          
+        </ul>
+
+      </div>
+      </li>
+      <li><a href="">KHÁCH HÀNG ƯU TIÊN</a>
+        <div id="sub-menu2">
+          <ul>
+            <li> <a href="">Tin tức và sự kiện</a></li>
+            <li> <a href="">Quyền lợi và điều kiện tham gia</a></li>
+            <li> <a href="">Sản phẩm dịch vụ</a></li>
+            <li> <a href="">Điểm giao dịch ưu tiên</a></li>
+            <li> <a href="">Khách hàng doanh nghiệp</a></li>
+            
+          </ul>
+        </li>
+        <li><a href="">KHÁCH HÀNG CÁ NHÂN</a>
+          <div id="sub-menu">
+            <ul>
+
+
+              <li><a href="">Giao dịch an toàn</a>
+              </li>
+              <li><a href="">VCB Family</a></li>
+              <li><a href="">VCB Rewards</a></li>
+              <li><a href="">Đầu tư</a></li>
+              <li><a href="">Bảo hiểm</a></li>
+              <li><a href="">Ngân hàng số</a></li>
+              <li><a href="">Chuyển và nhận tiền</a></li>
+              
+              <li><a href="">Cho vay</a></li>
+              <li><a href="">Tiết kiệm</a>
+                <ul id="menu_child3">
+           <li><a href="">Tiền gửi, tiết kiệm trả lãi sau<hr></a></li>
+           <li><a href="">Tiền gửi rút gốc linh hoạt<hr></a></li>
+           <li><a href="">Tiền gửi, tiết kiệm trả lãi trước<hr></a></li>
+           <li><a href="">Tiết kiệm trả lãi định kỳ<hr></a></li>
+          
+           <li><a href="">Tiết kiệm tự động<hr></a></li>
+           <li><a href="">Tích lũy kiểu hối<hr></a></li>
+           <li><a href="">Tiền gửi trưc tuyến<hr></a></li>
+           <li><a href="">Tiền gửi tích lũy trực tuyến<hr></a></li>
+         </ul>
+       </li>
+       <li><a href="">Thẻ</a>
+        <ul id="menu_child2">
+          <li><a href="">Thẻ tin dụng quốc tế<hr>
+         </a></li>
+          <li><a href="">Thẻ ghi nợ quốc tế<hr></a></li>
+          <li><a href="">Thẻ ghi nợ nội địa<hr></a></li>
+          <li><a href="">Dịch vụ thanh toán<hr></a></li>
+          
+          <li><a href="">Tin tức cập nhật<hr></a></li>
+          <li><a href="">Lưu ý khi sử dụng thẻ<hr></a></li>
+          <li><a href="">Đạt lịch hẹn mở thẻ<hr></a></li>
+          <li><a href="">Ưu đãi trả góp thẻ<hr></a></li>
+        </ul>
+      </li>        
+        <li><a href="">Tài khoản</a>
+        <ul id="menu_child1">
+          <li><a href="">Mở tài khoản trực tuyến
+              <hr>
+            </a></li>
+          <li><a href="">Đặt lịch hẹn mở tài khoản
+              <hr>
+            </a></li>
+          <li><a href="">Tài khoản thanh toan
+              <hr>
+            </a></li>
+          <li><a href="">Mở tài khoản trên ví VPPAY
+              <hr>
+            </a></li>
+        </ul>
+      </li>
+       <li><a href="">Đăng ký dịch vụ</a> </li>
+    
+            
+           
+  
+              <li><a href="">Ưu đãi</a>
+                <ul id="menu_child">
+                  <li> <a href="">Ưu đãi chung
+                      <hr>
+                    </a></li>
+                  <li> <a href="">Ưu đãi thẻ
+                      <hr>
+                    </a></li>
+                  <li> <a href="">Bảo hiểm
+                      <hr>
+                    </a></li>
+                  <li> <a href="">Đầu tư
+                      <hr>
+                    </a></li>
+                </ul>
+  
+              </li>
+              
+            
+          
+              
+             
+              
+              
+             
+              
+            </ul>
+          </div>
+        </li>
+    </ul>
+  </div>
+  <!-- <script src="http://code.jquery.com/jquery-1.7.min.js"></script> -->
+  <div class="container">
+  
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+    
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+        <li data-target="#myCarousel" data-slide-to="4"></li>
+        <li data-target="#myCarousel" data-slide-to="5"></li>
+        <li data-target="#myCarousel" data-slide-to="6"></li>
+
+      </ol>
+  
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+        <div class="item active">
+          <div id="chutrongbanner">
+            <h2>CHẠM ĐẲNG CẤP - TIÊU SÀNH ĐIỆU 
+            </h2>
+            <p>
+              Hoàn 100.000 VND cho chủ thẻ Vietcombank Visa liên kết thẻ với Google Wallet có giao dịch từ 200.00 VND
+            </p>
+          </div>
+        
+        
+          <img src="./banner1.jpg" alt="" style="width:1200px;height: 300px;border-radius: 20px;">
+        </div>
+  
+        <div class="item">
+          <div id="chutrongbanner">
+            <h2>HOÀN TIỀN LÊN ĐẾN 950.000 ĐỒNG
+            </h2>
+            <p>
+              Khi phát hành và chi tiêu bằng thẻ tín dụng JCB hạng vàng
+            </p>
+          </div>
+          <img src="./banner2.jpg" alt="" style="width:1200px;height: 300px;border-radius: 20px;">
+        </div>
+        <div class="item">
+          <div id="chutrongbanner">
+            <h2>XÀI THẺ VIETCOMBANK, ĐẾN AEON CHỌN GÌ CŨNG ĐÃ
+            </h2>
+            <p>
+             Tặng Voucher 100K cho hóa đơn từ 1 triệu đồng thanh toán bằng thẻ Quốc tế Vietcombank
+            </p>
+          </div>
+          <img src="./banner3.jpg" alt="" style="width:1200px;height: 300px;border-radius: 20px;">
+        </div>
+      
+        <div class="item">
+          <div id="chutrongbanner">
+            <h2>CHẠM THẺ SANG - NGÀN KHỞI SẮC
+            </h2>
+            <p>
+             Ưu đãi đến 60 triệu đồng nhân dịp ra mắt thẻ tín dụng JCB Platinum
+            </p>
+            <p>
+             Áp dụng đến 27/09/2023
+             </p>
+          </div>
+          <img src="./banner4.jpg" alt="" style="width:1200px;height: 300px;border-radius: 20px;">
+        </div>
+        <div class="item">
+          <div id="chutrongbanner">
+            <h2>BẢO HIỂM VỀ TAY, CÓ NGAY VOUCHER
+            </h2>
+            <p>
+             Tặng phiếu mua hàng lên đến 500.000 VND khi mua bảo hiểm online tại Vietcombank
+            </p>
+            <p>Áp dụng từ 05/05/2023 đến hết 3107/2023</p>
+          </div>
+          <img src="./banner5.jpg" alt="" style="width:1200px;height: 300px;border-radius: 20px;">
+        </div>
+        <div class="item">
+          <div id="chutrongbanner">
+            <h2>TIÊU THẺ NGÀY NGÀY - QUÀ TẶNG ĐẦY TAY
+            </h2>
+            <p>
+              Khám phá thế giới ưu đãi thẻ " Joy of life"
+            </p>
+            <p>
+             Giải trí - Ẩm thực - Du lịch - Thời trang - Điện máy...
+            </p>
+          </div>
+          <img src="./banner6.jpg" alt="" style="width:1200px;height: 300px;border-radius: 20px;">
+        </div>
+        <div class="item">
+          <div id="chutrongbanner">
+            <h2>VCB TAP TO PHONE
+            </h2>
+            <h2>GIAO DỊCH THÔNG MINH, RINH QUÀ THẬT CHẤT
+            </h2>
+            <p>
+              Hoàn 800.000 VND cho đơn vị chấp nhận thẻ có doanh số từ 20.000.000 VND
+            </p>
+            <p>
+             Áp dụng đến 16/06/2023
+            </p>
+          </div>
+          <img src="./banner6.jpg" alt="" style="width:1200px;height: 300px;border-radius: 20px;">
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div id="content">
+    <div class="contentLeft">
+      <div class="contentLeft_tittle">TÀI KHOẢN</div>
+
+      <div class="contentLeft_Small_Menu">
+        <li><a href="">Mở tải khoản trực tuyến (eKYC)</a></li>
+        <hr>
+        <li><a href="">Đặt lịch hẹn mở Tài Khoản</a></li>
+        <hr>
+        <li><a href="">Tài khoả n thanh toán</a></li>
+        <hr>
+        <li><a href="">Mở Tài Khoản Vietcombank trên ví VNPAY</a></li>
+      </div>
+
+      <div class="contentLeft_News">
+
+        <div class="image-list">
+          <div class="image-item">
+            <a href="#">
+              <img src="./img Bảng Tin Tức/aeon.webp" alt="Image 1">
+              <p>Thông báo chương trình voucher tặng 100k tại siêu thị aeon cùng thẻ quốc tế vietcombank</p>
+            </a>
+          </div>
+
+          <div class="image-item">
+            <a href="#">
+              <img src="./img Bảng Tin Tức/20230512_MKTBL_Avatar_Liên kết ví VNPAYac91.png" alt="Image 2">
+              <p>Liên kết ngay tài khoản vietcombank với ví VNPT có thể nhận ngay phần thưởng lên đến 1 triệu đồng</p>
+            </a>
+          </div>
+
+          <div class="image-item">
+            <a href="#">
+              <img src="./img Bảng Tin Tức/20230512_MKTBL_Thong bao le quay thuongac91.jpg" alt="Image 3">
+              <p>Thông báo lễ quay thưởng cuối kỳ hàng năm chủ đề "Vạn quà hay - Thưởng mỗi ngày"</p>
+            </a>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    <div class="contentRight">
+      <div class="contentRight_grid">
+        <img src="./Img Tài Khoản/Avatar 600x350.jpg" alt="">
+        <h4>Mở tài khoản trực tuyến(EKYC)</h4>
+        <a href="">Xem thêm</a>
+      </div>
+
+      <div class="contentRight_grid">
+        <img src="./Img Tài Khoản/(600x350) Dat lich hen.png" alt="">
+        <h4>Đặt lịch hẹn mở tài khoản</h4>
+        <a href="">Xem thêm</a>
+        
+      </div>
+      <div class="contentRight_grid">
+        <img src="./Img Tài Khoản/Avatar 600x350.jpg" alt="">
+        <h4>Tài khoản thanh toán </h4>
+        <a href="">Xem thêm</a>
+        
+      </div>
+      <div class="contentRight_grid">
+        <img src="./Img Tài Khoản/Mockup man hinh eKYC VCB Digibank-01.png" alt="">
+        <h4>Mở Tài Khoản Vietcombank trên ví VNPAY</h4>
+        <a href="">Xem thêm</a>
+        
+      </div>
+    </div>
+  </div>
+
+  <div id="footer">
+    <div class="footerGrid">
+      <h4>Liên hệ</h4>
+      <li><a href="">1900 54 54 13</a></li>
+      <li><a href="">cơ chế tố giác</a></li>
+      <li><a href="">Email liên hệ</a></li>
+    </div>
+    <div class="footerGrid">
+      <h4>Tìm vietcombank</h4>
+      <li><a href="">Điểm đặt ATM</a></li>
+      <li><a href="">Điểm giao dịch</a></li>
+      <li><a href="">Điểm mua bán ngoại tệ</a></li>
+    </div>
+    <div class="footerGrid">
+      <h4>Thông tin</h4>
+      <li><a href="">Tỷ Giá</a></li>
+      <li><a href="">Lãi suất</a></li>
+      <li><a href="">Câu hỏi thường gặp</a></li>
+    </div>
+    <div class="footerGrid">
+      <h4>Công cụ tính toán </h4>
+      <li><a href="">Chuyển đổi ngoại tệ</a></li>
+      <li><a href="">Tính lịch trả nợ</a></li>
+    </div>
+  </div>
+
+  
+</body>
+</html>
