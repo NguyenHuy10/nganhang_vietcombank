@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact</title>
+    <style>
+        html, body {
+            height: 70%;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-image: url('./IBM-Collaborated-with-the-City-of-Seoul_-South-Korea-to-Develop-an-AI-based-Virtual-Assistant-for-its-Citizens-using-IBM-Watson.jpg');
+            background-size: cover;
+        }
+
+        .container {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .content {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border-radius: 20px;
+        }
+
+      
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   
+    <script src="https://cdn.emailjs.com/sdk/2.6.4/email.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#myForm').on('submit', function(event) {
+                event.preventDefault();
+
+                var formData = new FormData(this);
+                formData.append('service_id', 'service_uszxa7b');
+                formData.append('template_id', 'template_3lx2o1j');
+                formData.append('user_id', 'aacOAlaG-3oNdsO88');
+                formData.append('to_email', $('#email').val()); // Lấy giá trị email từ trường nhập liệu
+
+                $.ajax('https://api.emailjs.com/api/v1.0/email/send-form', {
+                    type: 'POST',
+                    data: formData,
+                    contentType: false,
+                    processData: false
+                }).done(function() {
+                    alert('Email của bạn đã được gửi đi! VIETCOMBANK sẽ phản hồi bạn trong thời gian nhanh nhất.');
+                    $('#myForm')[0].reset();
+                }).fail(function(error) {
+                    alert('Oops...Lỗi ' + JSON.stringify(error));
+                });
+            });
+            
+            $('#cancelButton').on('click', function() {
+                $('#myForm')[0].reset();
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        (function(){
+          emailjs.init("aacOAlaG-3oNdsO88");
+        })();
+    </script>
+    <style>
+        .form-group {
+            margin-bottom: 20px;
+            height: auto;
+        }
+
+        .img{
+            float: left;
+        }
+
+        #anh {
+            position: absolute;
+            margin: 30px;
+            margin-top: 50px;
+            margin-left: 100px;
+        }
+
+        #myForm {
+            margin: 70px;
+        }
+
+        #myForm label {
+            font-size: 20px;
+            color: aliceblue;
+            padding: 10px ;
+            display: block;
+            padding-top: 0px;
+        }
+
+        .content h1 {
+            font-size: 50px;
+            color: aliceblue;
+            display: block;
+            padding-top: 0px;
+            text-align: center;
+            margin: 0%;
+            margin-top: 20px;
+            margin-bottom: -20px;
+        }
+
+        input {
+            width: 400px;
+            height: 50px;
+            border-radius: 10px;
+        }
+
+        textarea {
+            width: 450px;
+            height: 100px;
+            border-radius: 10px;
+        }
+
+        button {
+            margin-left: 60px;
+            height: 50px;
+            width: 150px;
+            border-radius: 10px;
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div id="anh">
+        <img src="../logo.png" alt="" style="width:250px;">
+    </div>
+    <div class="container">
+        <div class="content">
+            <h1>Liên hệ</h1>
+            <form id="myForm">
+                <div class="form-group">
+                    <label for="name">Họ và tên:</label>
+                    <input type="text" id="name" name="name" required placeholder="Nhập họ và tên.">
+                </div>
+                <div class="form-group">
+                    <label for="email">Địa chỉ email:</label>
+                    <input type="email" id="email" name="email" required placeholder="Nhập email.">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Số điện thoại:</label>
+                    <input type="text" id="phone" name="phone" required placeholder="Nhập số điện thoại.">
+                </div>
+                <div class="form-group">
+                    <label for="message">Vấn đề bạn thắc mắc:</label>
+                    <textarea id="message" name="message" required placeholder="Nhập vấn đề của bạn."></textarea>
+                </div>
+                <button type="submit">Gửi</button>
+                <button id="cancelButton" type="button">Hủy</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
